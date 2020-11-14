@@ -19,7 +19,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	done := make(chan struct{})
+	done := make(chan struct{}) // make will create a struct {} type channel, this is  purely a reference
 	go func() {
 		io.Copy(os.Stdout, conn) // NOTE: ignoring errors
 		log.Println("done")

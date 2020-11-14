@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 219.
-//!+
 
 // Clock1 is a TCP server that periodically writes the time.
 package main
@@ -15,6 +14,7 @@ import (
 )
 
 func main() {
+	// func Listen(network, address string) (Listener, error)
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)
